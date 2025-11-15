@@ -7,7 +7,8 @@
     "severity": 3,
     "createdAt": "2025-07-09T10:00:00Z",
     "assignee": "alice",
-    "tags": ["auth", "bug"]
+    "tags": ["auth", "bug"],
+    "userDefinedRank": 5
   },
   {
     "id": "2",
@@ -17,7 +18,8 @@
     "severity": 2,
     "createdAt": "2025-07-08T12:00:00Z",
     "assignee": "bob",
-    "tags": ["performance"]
+    "tags": ["performance"],
+    "userDefinedRank": 3
   },
   {
     "id": "3",
@@ -27,6 +29,7 @@
     "severity": 1,
     "createdAt": "2025-07-07T09:30:00Z",
     "assignee": "carol",
-    "tags": ["ui"]
+    "tags": ["ui"],
+    "userDefinedRank": 1
   }
 ]
