@@ -1,12 +1,108 @@
 # 🧠 Issue Board – React Engineering Assessment
 
-Welcome! This is a React case study designed to assess your skills in frontend architecture, state management, component design, and algorithmic
-thinking.
+A fully-functional Kanban-style issue board built with React, TypeScript, and modern best practices. Features drag-and-drop functionality, real-time updates, role-based access control, and comprehensive state management.
 
-You’ll build a **Kanban-style issue board** with interactive functionality, sorting logic, and user access control — similar to a simplified Jira or
-GitHub Projects board.
+## 🚀 Quick Start
+
+```bash
+npm install
+npm start
+```
+
+The application will open at [http://localhost:3000](http://localhost:3000)
+
+### Test Users
+
+- **Admin**: Can drag & drop issues, mark as resolved, and edit all fields
+  - Set in `src/constants/currentUser.ts` (default: `role: 'admin'`)
+- **Contributor**: Read-only view (change role to `'contributor'` to test)
 
 ---
+
+## ✨ Features Implemented
+
+### Core Functionality
+- ✅ **Kanban Board** with 3 columns (Backlog, In Progress, Done)
+- ✅ **Drag & Drop** using @dnd-kit (admin only)
+- ✅ **Priority Score Sorting** - `severity * 10 + (daysSinceCreated * -1) + userDefinedRank`
+- ✅ **Search & Filter** with 300ms debouncing
+- ✅ **Optimistic Updates** with 500ms simulated network delay
+- ✅ **Undo Mechanism** with 5-second rollback window
+- ✅ **Recently Accessed** sidebar (last 5 issues, localStorage)
+- ✅ **Role-Based Access Control** (admin vs contributor)
+- ✅ **Polling** - Auto-refresh every 10 seconds
+- ✅ **Error Handling** with 10% simulated failure rate
+- ✅ **Loading States** throughout the app
+- ✅ **Toast Notifications** for user feedback
+
+### Architecture Highlights
+- **State Management**: Zustand for global state
+- **Custom Hooks**: `usePolling`, `useRecentlyAccessed`
+- **Type Safety**: Strict TypeScript throughout
+- **Component Architecture**: Atomic, reusable components
+- **Performance**: Memoization, debouncing, stable sorting
+- **Testing**: Unit tests for sorting algorithm (8 passing tests)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Board/
+│   │   ├── Board.tsx           # Main Kanban board with DnD
+│   │   ├── Column.tsx          # Individual status columns
+│   │   └── IssueCard.tsx       # Draggable issue cards
+│   ├── Filters/
+│   │   ├── SearchBar.tsx       # Debounced search input
+│   │   └── FilterPanel.tsx     # Assignee/severity filters
+│   ├── Navigation.tsx          # Top navigation bar
+│   └── RecentlySidebar.tsx     # Recently accessed issues
+├── hooks/
+│   ├── usePolling.ts           # Polling hook for real-time updates
+│   └── useRecentlyAccessed.ts  # localStorage tracking hook
+├── pages/
+│   ├── BoardPage.tsx           # Main board view
+│   ├── IssueDetailPage.tsx     # Individual issue detail
+│   └── SettingsPage.tsx        # Settings (stub)
+├── store/
+│   └── issueStore.ts           # Zustand global state
+├── utils/
+│   ├── api.ts                  # Mock API with delays/errors
+│   ├── priorityScore.ts        # Priority calculation
+│   ├── sortIssues.ts           # Sorting algorithm
+│   ├── sortIssues.test.ts      # Unit tests
+│   └── toastHelpers.tsx        # Toast notification helpers
+├── constants/
+│   └── currentUser.ts          # Mock user context
+├── data/
+│   └── issues.json             # Sample data
+└── types.ts                    # TypeScript definitions
+```
+
+---
+
+## 🧪 Testing
+
+### Run Unit Tests
+```bash
+npm test
+```
+
+### Run Specific Test
+```bash
+npm test -- sortIssues.test.ts
+```
+
+### Build for Production
+```bash
+npm run build
+```
+
+---
+
+## 🎯 Original Requirements
 
 ## 🎯 Objective
 
