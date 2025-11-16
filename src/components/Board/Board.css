@@ -1,0 +1,145 @@
+.board-container {
+  padding: 24px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.board__header {
+  margin-bottom: 24px;
+}
+
+.board__header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.board__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.board__user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.board__user-name {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.board__user-role {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.board__user-role--admin {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.board__user-role--contributor {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.board__controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.board__sync-info {
+  font-size: 13px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.board__sync-info strong {
+  color: #374151;
+}
+
+.board__sync-loading {
+  color: #3b82f6;
+  font-weight: 500;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.board__read-only-notice {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  color: #92400e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.board__content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.board__columns {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.board__error {
+  padding: 40px;
+  text-align: center;
+  background: #fee2e2;
+  border: 1px solid #dc2626;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.board__error p {
+  color: #dc2626;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.board__retry {
+  padding: 10px 24px;
+  background-color: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.board__retry:hover {
+  background-color: #b91c1c;
+}
