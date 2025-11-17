@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   DndContext,
   DragEndEvent,
@@ -31,7 +31,7 @@ export const Board: React.FC = () => {
     getFilteredAndSortedIssues,
   } = useIssueStore();
 
-  const [activeIssue, setActiveIssue] = React.useState<Issue | null>(null);
+  const [activeIssue, setActiveIssue] = useState<Issue | null>(null);
 
   // Initialize - fetch issues on mount
   useEffect(() => {

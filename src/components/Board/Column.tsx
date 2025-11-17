@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { Issue, IssueStatus } from '../../types';
 import { IssueCard } from './IssueCard';
