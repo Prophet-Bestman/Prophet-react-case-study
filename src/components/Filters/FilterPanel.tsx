@@ -1,4 +1,3 @@
-import React from 'react';
 import { useIssueStore } from '../../store/issueStore';
 import './FilterPanel.css';
 
