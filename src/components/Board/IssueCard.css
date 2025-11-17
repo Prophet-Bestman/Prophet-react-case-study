@@ -1,18 +1,18 @@
 .issue-card {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 8px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .issue-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
-  border-color: #3b82f6;
+  box-shadow: var(--shadow-md);
+  background-color: var(--background-secondary);
+  border-color: var(--border-focus);
 }
 
 .issue-card--dragging {
@@ -37,52 +37,53 @@
 
 .issue-card__id {
   font-size: 12px;
-  color: #6b7280;
-  font-weight: 500;
+  color: var(--text-subtle);
+  font-weight: 600;
 }
 
 .issue-card__priority {
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 2px 8px;
-  border-radius: 4px;
-  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
 }
 
 .priority-high {
-  background-color: #fee2e2;
-  color: #dc2626;
+  background-color: var(--error-red-light);
+  color: var(--error-red);
 }
 
 .priority-medium {
-  background-color: #fef3c7;
-  color: #d97706;
+  background-color: var(--warning-yellow-light);
+  color: var(--warning-yellow);
 }
 
 .priority-low {
-  background-color: #dbeafe;
-  color: #2563eb;
+  background-color: var(--primary-blue-light);
+  color: var(--primary-blue);
 }
 
 .issue-card__title {
   font-size: 14px;
-  font-weight: 600;
-  color: #111827;
-  margin: 0 0 12px 0;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
   line-height: 1.4;
 }
 
 .issue-card__metadata {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   font-size: 12px;
-  color: #6b7280;
+  color: var(--text-subtle);
   margin-bottom: 8px;
 }
 
 .issue-card__metadata strong {
-  color: #374151;
+  color: var(--text-secondary);
+  font-weight: 600;
 }
 
 .issue-card__tags {
@@ -94,9 +95,9 @@
 
 .issue-card__tag {
   font-size: 11px;
-  padding: 3px 8px;
-  background-color: #f3f4f6;
-  color: #4b5563;
-  border-radius: 12px;
+  padding: 2px 6px;
+  background-color: var(--background-hover);
+  color: var(--text-secondary);
+  border-radius: 3px;
   font-weight: 500;
 }
