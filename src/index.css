@@ -1,0 +1,82 @@
+:root {
+  /* Professional color palette */
+  --primary-blue: #0052cc;
+  --primary-blue-hover: #0065ff;
+  --primary-blue-light: #deebff;
+  --secondary-blue: #0747a6;
+  --accent-blue: #2684ff;
+
+  --background-primary: #f4f5f7;
+  --background-secondary: #ffffff;
+  --background-hover: #ebecf0;
+
+  --text-primary: #172b4d;
+  --text-secondary: #5e6c84;
+  --text-subtle: #6b778c;
+
+  --border-color: #dfe1e6;
+  --border-focus: #4c9aff;
+
+  --success-green: #00875a;
+  --success-green-light: #e3fcef;
+  --warning-yellow: #ff991f;
+  --warning-yellow-light: #fffae6;
+  --error-red: #de350b;
+  --error-red-light: #ffebe6;
+
+  --shadow-sm: 0 1px 1px rgba(9, 30, 66, 0.25);
+  --shadow-md: 0 4px 8px -2px rgba(9, 30, 66, 0.25);
+  --shadow-lg: 0 8px 16px -4px rgba(9, 30, 66, 0.31);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-blue-hover);
+  text-decoration: underline;
+}
