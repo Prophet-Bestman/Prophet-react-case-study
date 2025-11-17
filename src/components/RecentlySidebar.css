@@ -1,6 +1,6 @@
 .recently-sidebar {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
   min-width: 240px;
@@ -10,10 +10,10 @@
 .recently-sidebar__title {
   font-size: 14px;
   font-weight: 700;
-  color: #111827;
+  color: var(--text-primary);
   margin: 0 0 12px 0;
   padding-bottom: 8px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border);
 }
 
 .recently-sidebar__list {
@@ -24,29 +24,29 @@
 
 .recently-sidebar__item {
   padding: 10px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .recently-sidebar__item:hover {
-  background: #f3f4f6;
-  border-color: #3b82f6;
+  background: var(--bg-hover);
+  border-color: var(--blue-400);
   transform: translateX(2px);
 }
 
 .recently-sidebar__item-id {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--text-tertiary);
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .recently-sidebar__item-title {
   font-size: 13px;
-  color: #111827;
+  color: var(--text-primary);
   font-weight: 500;
   margin-bottom: 6px;
   white-space: nowrap;
@@ -56,5 +56,5 @@
 
 .recently-sidebar__item-status {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--text-tertiary);
 }
