@@ -43,6 +43,21 @@ export const IssueCard: React.FC<IssueCardProps> = ({ issue, isDragging }) => {
     }
   };
 
+  const getSeverityLabel = (severity: number) => {
+    switch (severity) {
+      case 3:
+        return 'High';
+      case 2:
+        return 'Medium';
+      case 1:
+        return 'Low';
+      default:
+        return `Severity ${severity}`;
+    }
+  };
+
+  const allTags = [`Severity: ${getSeverityLabel(issue.severity)}`, ...issue.tags];
+
   return (
     <div
       ref={setNodeRef}
@@ -64,19 +79,12 @@ export const IssueCard: React.FC<IssueCardProps> = ({ issue, isDragging }) => {
 
       <h3 className="issue-card__title">{issue.title}</h3>
 
-      <div className="issue-card__metadata">
-        <div className="issue-card__severity">
-          Severity: <strong>{issue.severity}</strong>
-        </div>
-        <div className="issue-card__assignee">
-          Assignee: <strong>{issue.assignee}</strong>
-        </div>
-      </div>
+      <div className="issue-card__assignee">{issue.assignee}</div>
 
-      {issue.tags.length > 0 && (
+      {allTags.length > 0 && (
         <div className="issue-card__tags">
-          {issue.tags.map((tag) => (
-            <span key={tag} className="issue-card__tag">
+          {allTags.map((tag, index) => (
+            <span key={tag + index} className="issue-card__tag">
               {tag}
             </span>
           ))}
