@@ -11,6 +11,7 @@ import {
 import dayjs from 'dayjs';
 import { useIssueStore } from '../../store/issueStore';
 import { usePolling } from '../../hooks/usePolling';
+import { useSettings } from '../../hooks/useSettings';
 import { currentUser } from '../../constants/currentUser';
 import { Column } from './Column';
 import { IssueCard } from './IssueCard';
@@ -31,6 +32,7 @@ export const Board: React.FC = () => {
     getFilteredAndSortedIssues,
   } = useIssueStore();
 
+  const { settings } = useSettings();
   const [activeIssue, setActiveIssue] = useState<Issue | null>(null);
 
   // Initialize - fetch issues on mount
@@ -38,12 +40,12 @@ export const Board: React.FC = () => {
     fetchIssues();
   }, [fetchIssues]);
 
-  // Set up polling - fetch every 10 seconds
+  // Set up polling with configurable interval
   usePolling(
     () => {
       fetchIssues();
     },
-    10000, // 10 seconds
+    settings.pollingInterval,
     true
   );
 
@@ -130,13 +132,13 @@ export const Board: React.FC = () => {
         <div className="board__header-top">
           <h1 className="board__title">Issue Board</h1>
           <div className="board__user-info">
-            <span className="board__user-name">{currentUser.name}</span>
+            <span className="board__user-name">{settings.userName}</span>
             <span
               className={`board__user-role ${
                 isAdmin ? 'board__user-role--admin' : 'board__user-role--contributor'
               }`}
             >
-              {currentUser.role}
+              {settings.userRole}
             </span>
           </div>
         </div>
