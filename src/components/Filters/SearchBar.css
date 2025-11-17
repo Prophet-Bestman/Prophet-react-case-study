@@ -7,10 +7,10 @@
 .search-bar__input {
   width: 100%;
   padding: 8px 36px 8px 12px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border);
   border-radius: 3px;
   font-size: 14px;
-  background-color: var(--background-secondary);
+  background-color: var(--bg-primary);
   color: var(--text-primary);
   outline: none;
   transition: all 0.15s ease;
@@ -22,7 +22,7 @@
 }
 
 .search-bar__input::placeholder {
-  color: var(--text-subtle);
+  color: var(--text-tertiary);
 }
 
 .search-bar__clear {
@@ -32,7 +32,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: var(--text-subtle);
+  color: var(--text-tertiary);
   font-size: 16px;
   cursor: pointer;
   padding: 4px;
@@ -44,6 +44,6 @@
 }
 
 .search-bar__clear:hover {
-  background-color: var(--background-hover);
+  background-color: var(--bg-hover);
   color: var(--text-primary);
 }

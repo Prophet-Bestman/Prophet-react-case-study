@@ -45,13 +45,13 @@
 }
 
 .board__user-role--admin {
-  background-color: var(--primary-blue-light);
-  color: var(--primary-blue);
+  background-color: var(--blue-100);
+  color: var(--blue-500);
 }
 
 .board__user-role--contributor {
-  background-color: var(--background-hover);
-  color: var(--text-subtle);
+  background-color: var(--bg-hover);
+  color: var(--text-tertiary);
 }
 
 .board__controls {
@@ -64,7 +64,7 @@
 
 .board__sync-info {
   font-size: 13px;
-  color: var(--text-subtle);
+  color: var(--text-tertiary);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -75,7 +75,7 @@
 }
 
 .board__sync-loading {
-  color: var(--accent-blue);
+  color: var(--blue-400);
   font-weight: 500;
   animation: pulse 1.5s ease-in-out infinite;
 }
@@ -92,8 +92,8 @@
 .board__read-only-notice {
   margin-top: 12px;
   padding: 12px 16px;
-  background-color: var(--warning-yellow-light);
-  border: 1px solid var(--warning-yellow);
+  background-color: var(--yellow-100);
+  border: 1px solid var(--yellow-500);
   border-radius: 3px;
   color: var(--text-primary);
   font-size: 14px;
@@ -117,21 +117,21 @@
 .board__error {
   padding: 40px;
   text-align: center;
-  background: var(--error-red-light);
-  border: 1px solid var(--error-red);
+  background: var(--red-100);
+  border: 1px solid var(--red-500);
   border-radius: 3px;
   margin: 20px;
 }
 
 .board__error p {
-  color: var(--error-red);
+  color: var(--red-500);
   font-size: 16px;
   margin-bottom: 16px;
 }
 
 .board__retry {
   padding: 8px 12px;
-  background-color: var(--primary-blue);
+  background-color: var(--blue-500);
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -142,5 +142,5 @@
 }
 
 .board__retry:hover {
-  background-color: var(--primary-blue-hover);
+  background-color: var(--blue-400);
 }

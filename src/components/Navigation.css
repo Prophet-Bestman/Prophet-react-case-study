@@ -1,17 +1,16 @@
 .nav {
-  background-color: var(--background-secondary);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--border);
+  height: 56px;
+  display: flex;
+  align-items: center;
 }
 
 .nav__container {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +19,7 @@
 .nav__brand {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .nav__logo {
@@ -29,20 +28,20 @@
 }
 
 .nav__title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .nav__link {
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 3px;
   color: var(--text-secondary);
   font-weight: 500;
@@ -52,17 +51,17 @@
 }
 
 .nav__link:hover {
-  background-color: var(--background-hover);
+  background-color: var(--bg-hover);
   color: var(--text-primary);
   text-decoration: none;
 }
 
 .nav__link--active {
-  background-color: var(--primary-blue-light);
-  color: var(--primary-blue);
+  background-color: var(--blue-100);
+  color: var(--blue-600);
 }
 
 .nav__link--active:hover {
-  background-color: var(--primary-blue-light);
-  color: var(--primary-blue);
+  background-color: var(--blue-100);
+  color: var(--blue-600);
 }

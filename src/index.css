@@ -1,32 +1,57 @@
 :root {
-  /* Professional color palette */
-  --primary-blue: #0052cc;
-  --primary-blue-hover: #0065ff;
-  --primary-blue-light: #deebff;
-  --secondary-blue: #0747a6;
-  --accent-blue: #2684ff;
+  --blue-500: #0052cc;
+  --blue-600: #0747a6;
+  --blue-400: #0065ff;
+  --blue-100: #deebff;
+  --blue-75: #b3d4ff;
 
-  --background-primary: #f4f5f7;
-  --background-secondary: #ffffff;
-  --background-hover: #ebecf0;
+  --green-500: #00875a;
+  --green-100: #e3fcef;
+  --yellow-500: #ff991f;
+  --yellow-100: #fffae6;
+  --red-500: #de350b;
+  --red-100: #ffebe6;
+
+  /* Light theme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f4f5f7;
+  --bg-tertiary: #fafbfc;
+  --bg-hover: #ebecf0;
+  --bg-active: #e4e5e7;
 
   --text-primary: #172b4d;
   --text-secondary: #5e6c84;
-  --text-subtle: #6b778c;
+  --text-tertiary: #6b778c;
+  --text-inverse: #ffffff;
 
-  --border-color: #dfe1e6;
+  --border: #dfe1e6;
   --border-focus: #4c9aff;
 
-  --success-green: #00875a;
-  --success-green-light: #e3fcef;
-  --warning-yellow: #ff991f;
-  --warning-yellow-light: #fffae6;
-  --error-red: #de350b;
-  --error-red-light: #ffebe6;
+  --shadow-sm: 0 1px 1px rgba(9, 30, 66, 0.08);
+  --shadow-md: 0 4px 8px -2px rgba(9, 30, 66, 0.15);
+  --shadow-lg: 0 8px 16px -4px rgba(9, 30, 66, 0.2);
+}
 
-  --shadow-sm: 0 1px 1px rgba(9, 30, 66, 0.25);
-  --shadow-md: 0 4px 8px -2px rgba(9, 30, 66, 0.25);
-  --shadow-lg: 0 8px 16px -4px rgba(9, 30, 66, 0.31);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1d2125;
+    --bg-secondary: #22272b;
+    --bg-tertiary: #282e33;
+    --bg-hover: #2c3338;
+    --bg-active: #373e47;
+
+    --text-primary: #b6c2cf;
+    --text-secondary: #9fadbc;
+    --text-tertiary: #8c9bab;
+    --text-inverse: #1d2125;
+
+    --border: #38414a;
+    --border-focus: #85b8ff;
+
+    --shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 8px 16px -4px rgba(0, 0, 0, 0.45);
+  }
 }
 
 * {
@@ -40,7 +65,7 @@ body {
     'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-primary);
+  background-color: var(--bg-secondary);
   color: var(--text-primary);
   font-size: 14px;
   line-height: 1.42857;
@@ -56,7 +81,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
 }
 
 button:disabled {
@@ -71,12 +96,12 @@ input, select, textarea {
 }
 
 a {
-  color: var(--primary-blue);
+  color: var(--blue-500);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--primary-blue-hover);
+  color: var(--blue-400);
   text-decoration: underline;
 }
