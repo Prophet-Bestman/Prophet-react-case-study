@@ -34,6 +34,12 @@
   letter-spacing: -0.02em;
 }
 
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nav__links {
   display: flex;
   align-items: center;
@@ -64,4 +70,29 @@
 .nav__link--active:hover {
   background-color: var(--blue-100);
   color: var(--blue-600);
+}
+
+.nav__theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav__theme-toggle:hover {
+  background: var(--bg-active);
+  border-color: var(--border-focus);
+  transform: scale(1.05);
+}
+
+.nav__theme-icon {
+  font-size: 18px;
+  line-height: 1;
 }

@@ -1,4 +1,5 @@
-:root {
+:root,
+:root[data-theme="light"] {
   --blue-500: #0052cc;
   --blue-600: #0747a6;
   --blue-400: #0065ff;
@@ -32,26 +33,37 @@
   --shadow-lg: 0 8px 16px -4px rgba(9, 30, 66, 0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #1d2125;
-    --bg-secondary: #22272b;
-    --bg-tertiary: #282e33;
-    --bg-hover: #2c3338;
-    --bg-active: #373e47;
+:root[data-theme="dark"] {
+  --blue-500: #0052cc;
+  --blue-600: #0747a6;
+  --blue-400: #0065ff;
+  --blue-100: #deebff;
+  --blue-75: #b3d4ff;
 
-    --text-primary: #b6c2cf;
-    --text-secondary: #9fadbc;
-    --text-tertiary: #8c9bab;
-    --text-inverse: #1d2125;
+  --green-500: #00875a;
+  --green-100: #e3fcef;
+  --yellow-500: #ff991f;
+  --yellow-100: #fffae6;
+  --red-500: #de350b;
+  --red-100: #ffebe6;
 
-    --border: #38414a;
-    --border-focus: #85b8ff;
+  --bg-primary: #1d2125;
+  --bg-secondary: #22272b;
+  --bg-tertiary: #282e33;
+  --bg-hover: #2c3338;
+  --bg-active: #373e47;
 
-    --shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.25);
-    --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.35);
-    --shadow-lg: 0 8px 16px -4px rgba(0, 0, 0, 0.45);
-  }
+  --text-primary: #b6c2cf;
+  --text-secondary: #9fadbc;
+  --text-tertiary: #8c9bab;
+  --text-inverse: #1d2125;
+
+  --border: #38414a;
+  --border-focus: #85b8ff;
+
+  --shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 16px -4px rgba(0, 0, 0, 0.45);
 }
 
 * {
