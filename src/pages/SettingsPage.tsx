@@ -6,19 +6,22 @@ import './SettingsPage.css';
 export const SettingsPage = () => {
   const { settings, updateSettings } = useSettings();
   const [userName, setUserName] = useState(settings.userName);
+  const [userRole, setUserRole] = useState(settings.userRole);
   const [pollingInterval, setPollingInterval] = useState(settings.pollingInterval / 1000);
   const [hasChanges, setHasChanges] = useState(false);
 
   useEffect(() => {
     const changed =
       userName !== settings.userName ||
+      userRole !== settings.userRole ||
       pollingInterval !== settings.pollingInterval / 1000;
     setHasChanges(changed);
-  }, [userName, pollingInterval, settings]);
+  }, [userName, userRole, pollingInterval, settings]);
 
   const handleSave = () => {
     updateSettings({
       userName,
+      userRole,
       pollingInterval: pollingInterval * 1000,
     });
     setHasChanges(false);
@@ -31,12 +34,13 @@ export const SettingsPage = () => {
 
   const handleReset = () => {
     setUserName(settings.userName);
+    setUserRole(settings.userRole);
     setPollingInterval(settings.pollingInterval / 1000);
     setHasChanges(false);
   };
 
   const getRoleDescription = () => {
-    if (settings.userRole === 'admin') {
+    if (userRole === 'admin') {
       return 'Full access to drag, update, and manage all issues';
     }
     return 'View-only access to the board';
@@ -65,8 +69,8 @@ export const SettingsPage = () => {
                 <div className="settings__profile-info">
                   <div className="settings__profile-name">{userName}</div>
                   <div className="settings__profile-role">
-                    <span className={`settings__badge settings__badge--${settings.userRole}`}>
-                      {settings.userRole}
+                    <span className={`settings__badge settings__badge--${userRole}`}>
+                      {userRole}
                     </span>
                   </div>
                 </div>
@@ -87,13 +91,19 @@ export const SettingsPage = () => {
               </div>
 
               <div className="settings__field">
-                <label className="settings__label">Role</label>
-                <div className="settings__readonly">
-                  <span className={`settings__badge settings__badge--${settings.userRole}`}>
-                    {settings.userRole}
-                  </span>
-                  <p className="settings__help">{getRoleDescription()}</p>
-                </div>
+                <label className="settings__label" htmlFor="role">
+                  Role
+                </label>
+                <select
+                  id="role"
+                  className="settings__input"
+                  value={userRole}
+                  onChange={(e) => setUserRole(e.target.value as 'admin' | 'contributor')}
+                >
+                  <option value="admin">Admin</option>
+                  <option value="contributor">Contributor</option>
+                </select>
+                <p className="settings__help">{getRoleDescription()}</p>
               </div>
             </div>
           </div>
