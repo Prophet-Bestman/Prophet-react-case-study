@@ -25,3 +25,10 @@ yarn-error.log*
 
 #Ignore windsurf AI rules
 .windsurfrules
+/.windsurf
+
+#ignore codacy files
+.codacy
+/.codacy
+
+
